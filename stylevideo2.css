@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+:root{
+    --main-color:#1E90FF;
+    --red:#e74c3c;
+    --oragen:#f39c12;
+    --white:#ffff;
+    --black:#2c3e50;
+    --light-color:#888;
+    --light-bg:#eee;
+    --border:.1rem solid rgba(0,0,0,.2);
+}
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline:none; border: none;
+    text-decoration: none;
+}
+
+*::selection{
+    background-color: var(--main-color);
+    color: #ffff;
+}
+
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+section{
+    padding: 2rem;
+    max-width: 1200px;
+
+}
+.video1 .play-video{
+    flex-basis: 100%;
+}
+
+.video1 .play-video .add-comment{
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+.video1 .play-video .add-comment img{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.video1 .play-video .add-comment input{
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid var(--light-color);
+    width: 100%;
+    padding-top: 5px;
+    color: var(--black);
+    background: transparent;
+    font-size: 15px;
+}
+.video1 .play-video .old-comment{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.video1 .play-video .old-comment .qui{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.video1 .play-video .old-comment h3{
+    font-size: 13px;
+    margin-bottom: 2px;
+    color: var(--black);
+}
+.video1 .play-video .old-comment h3 span{
+    font-size: 10px;
+    color: var(--black);
+    font-weight: 500;
+    margin-left: 8px;
+}
+.video1 .play-video .old-comment p{
+    color: var(--black);
+}
+.video1 .play-video .old-comment .accoment{
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 14px;
+}
+.video1 .play-video .old-comment .accoment img{
+    border-radius: 0;
+    width: 16px;
+    margin-right: 5px;
+}
+.video1 .play-video .old-comment .accoment span{
+    margin-right: 20px;
+    color: var(--light-color);
+    font-size: 10px;
+}
+.video1 .play-video .old-comment .accoment a{
+    color: var(--light-color);
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

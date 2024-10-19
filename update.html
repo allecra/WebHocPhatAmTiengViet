@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styleprofile.css">
+</head>
+<body>
+     <header class="header">
+        <section class="flex">
+            <a href="home.html" class="logo">Learn</a>
+            <form action="" method="post" class="search-form">
+                <input type="text" name="search_box" placeholder="Search courses..." required maxlength="100">
+                <button type="submit" class="fas fa-search" name="search-box"></button>
+            </form>
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+            <div class="profile">
+                <img src="https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/5124556.jpg?v=1704769231654">
+                <h3>Dazai Osamu</h3>
+                <span>student</span>
+                <a href="profile.html" class="btn">View Profile</a>
+                <div class="flex-btn">
+                    <a href="login2.html" class="option-btn">login</a>
+                    <a href="register2.html" class="option-btn">register</a>
+                </div>
+            </div>
+        </section>
+    </header>
+    <div class="side-bar">
+        <div class="close-side-bar">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="profile">
+            <img src="https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/5124556.jpg?v=1704769231654">
+            <h3>Dazai Osamu</h3>
+            <span>student</span>
+            <a href="profile.html" class="btn">View Profile</a>
+        </div>
+        <nav class="navbar">
+            <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="learn.html"><i class="fas fa-pen"></i><span>Learn</span></a>
+            <a href="video.html"><i class="fas fa-video"></i><span>Video</span></a>
+            <a href="support.html"><i class="fas fa-microphone"></i><span>Support</span></a>
+            <a href="contact.html"><i class="fas fa-headset"></i><span>Contact</span></a>
+        </nav>
+    </div>
+
+    <section class="form-container">
+        <form action="" method="post" enctype="multipart/form-data">
+            <h3>Update Profile</h3>
+            <p>Your name</p>
+            <input type="text" name="name" placeholder="Dazzai Osamu" maxlength="100" class="box">
+            <p>Your email</p>
+            <input type="email" name="email" placeholder="nguyenphuong2776@gmail.com" maxlength="100" class="box">
+            <p>Old password</p>
+            <input type="password" name="old_pass" placeholder="enter your old password" maxlength="50" class="box">
+            <p>New password</p>
+            <input type="password" name="new_pass" placeholder="enter your new password" maxlength="50" class="box">
+            <p>Confirm password</p>
+            <input type="password" name="c_pass" placeholder="confirm your new password" maxlength="50" class="box">
+            <p>Update pic</p>
+            <input type="file" name="image" accept="image/*" class="box">
+            <input type="submit" name="submit" value="update profile" class="btn">
+        </form>
+       
+    </section>
+
+
+
+
+
+    <footer class="fooster">
+        &copy; Created by <span>Tran Tuan Khoa</span> || No longer human
+    </footer>
+
+<script src="scriptlogin.js"></script>    
+</body>
+</html>

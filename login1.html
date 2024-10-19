@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="734662496346-1rq8l7rk2g66b9ku5icgftmcmmg1dqak.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="stylelogin.css"> <!-- Link đến file CSS -->
+    
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : 503969132606951,
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v12.0'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+      function loginWithFacebook() {
+          FB.login(function(response) {
+              if (response.authResponse) {
+                  console.log('Welcome! Fetching your information.... ');
+                  FB.api('/me', {fields: 'name, email'}, function(response) {
+                      console.log('Good to see you, ' + response.name + '.');
+                      console.log('Email: ' + response.email);
+                      var accessToken = response.authResponse.accessToken;
+                      console.log('Access Token: ' + accessToken);
+                      window.location.href = "home.html";
+                  });
+              } else {
+                  console.log('User cancelled login or did not fully authorize.');
+              }
+          }, {scope: 'email'});
+      }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="home.html" class="logo">Learn</a>
+            <form action="" method="post" class="search-form">
+                <input type="text" name="search_box" placeholder="Search courses..." required maxlength="100">
+                <button type="submit" class="fas fa-search" name="search-box"></button>
+            </form>
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+            <div class="profile">
+                <h3>Please login or register</h3>
+                <div class="flex-btn">
+                    <a href="login1.html" class="btn">login</a>
+                    <a href="register1.html" class="btn">register</a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <div class="side-bar">
+        <div class="close-side-bar">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="profile">
+            <h3>Please login or register</h3>
+            <div class="flex-btn">
+                <a href="login1.html" class="btn">login</a>
+                <a href="register1.html" class="btn">register</a>
+            </div>
+            <a href="home.html" class="btn">Try now</a>
+        </div>
+    </div>
+
+    <section class="form-container">
+        <form action="" method="post">
+            <h3>Welcome back</h3>
+            <p>Your email <span>*</span></p>
+            <input type="email" name="email" placeholder="enter your email" maxlength="100" class="box">
+            <p>Your password <span>*</span></p>
+            <input type="password" name="new_pass" placeholder="enter your password" maxlength="50" class="box">
+            <input type="submit" name="submit" value="Login" class="btn">
+            
+            <div class="social-container">
+                <a href="facebook_login_url" onclick="loginWithFacebook()" class="social-login facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Đăng nhập</span>
+                </a>
+                <a href="google_login_url" class="g-signin2" data-onsuccess="onSignIn" class="social-login google">
+                    <span class="google-text">GG</span>
+                    <i class="fab fa-google"></i>
+                </a>
+            </div>
+        </form>
+    </section>
+
+    <script>
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId());
+        console.log('Name: ' + profile.getName());
+        console.log('Email: ' + profile.getEmail());
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log('ID Token: ' + id_token);
+        window.location.href = "home.html";
+    }
+
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+        });
+    }
+    </script>
+  
+    <footer class="footer">
+        &copy; Created by <span>Nguyễn Thị Tâm</span> || No longer human
+    </footer>
+
+    <script src="scriptlogin.js"></script>    
+</body>
+</html>

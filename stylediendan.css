@@ -1,0 +1,280 @@
+/* Font mặc định cho toàn bộ trang */
+body {
+    font-family: 'Times New Roman', Times, serif; /* Chọn font chữ cho body */
+    margin: 0; /* Bỏ margin */
+    padding: 0; /* Bỏ padding */
+ 
+    background: url("https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/z4967068494540_49fb720e3ff4090985db3072cd0ebb84.jpg?v=1704769227907") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+/* Căn giữa cho các phần tử trong section diễn đàn */
+.diendan-section {
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Sắp xếp theo cột */
+   /* align-items: center; /* Căn giữa theo chiều ngang */
+    padding-top: 100px; /* Khoảng cách trên cho section diễn đàn */
+    margin: 20px; /* Margin cho section diễn đàn */
+    text-align: left; /* Căn chỉnh văn bản bên trái */
+
+
+}
+
+
+#questionInput {
+    width: 900px; /* Chiều rộng cho input */
+    height: 100px; /* Chiều cao cho input */
+    margin-right: 950px; /* Khoảng cách bên phải cho input */
+    padding: 10px; /* Padding cho input */
+    border: 1px solid #cccccc; /* Viền cho input */
+    border-radius: 10px; /* Bo góc cho input */
+    font-size: 16px; /* Kích thước chữ trong input */
+}
+
+
+button {
+    padding: 10px 20px; /* Padding cho nút */
+    background-color: #1E3986; /* Màu nền cho nút */
+    color: white; /* Màu chữ cho nút */
+    border: none; /* Bỏ viền cho nút */
+    border-radius: 5px; /* Bo góc cho nút */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    font-size: 16px; /* Kích thước chữ cho nút */
+    margin-top: 10px; /* Khoảng cách trên cho nút */
+}
+
+
+button:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}
+
+button:focus {
+    outline: 2px solid #5784FF; /* Đường viền nổi bật khi nút được focus */
+}
+
+.question {
+  width: 900px; /* Đặt độ dài cố định cho container câu hỏi */
+    padding: 15px; /* Padding cho câu hỏi */
+    border: 1px solid #dddddd; /* Viền cho câu hỏi */
+    margin-bottom: 10px; /* Khoảng cách dưới cho câu hỏi */
+    border-radius: 5px; /* Bo góc cho câu hỏi */
+    background-color: #f9f9f9; /* Màu nền cho câu hỏi */
+}
+
+.question:hover {
+    background-color: #e6e6e6; /* Màu nền khi hover câu hỏi */
+}
+
+.question h3 {
+    margin-bottom: 10px; /* Khoảng cách dưới cho tiêu đề câu hỏi */
+    font-size: 18px; /* Kích thước chữ cho tiêu đề câu hỏi */
+}
+
+.question p {
+    margin-bottom: 10px; /* Khoảng cách dưới cho nội dung câu hỏi */
+    font-size: 16px; /* Kích thước chữ cho nội dung câu hỏi */
+}
+
+
+
+.reply {
+    margin-left: 40px;
+    padding: 20px;
+    border-left: 2px dashed #28A745;
+    margin-top: 5px;
+}
+
+/* Ảnh nền */
+.background-image {
+    position: fixed; /* Đặt ảnh nền cố định */
+    margin-top: 80px; /* Điều chỉnh khoảng cách từ trên cho ảnh nền */
+    top: 0; /* Căn lề trên bằng 0 */
+    left: 0; /* Căn lề trái bằng 0 */
+    width: 100%; /* Chiều rộng đầy đủ cho ảnh nền */
+    height: 100%; /* Chiều cao đầy đủ cho ảnh nền */
+    z-index: -1; /* Đặt z-index thấp hơn để ảnh nền ở phía sau */
+    background-image: url("https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/1.png?v=1704769242336"); /* Đường dẫn đến ảnh nền */
+    background-size: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ không gian */
+    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+}
+
+/* Header chi tiết */
+.header1 {
+    background: #254F89; /* Màu nền cho header chi tiết */
+    display: flex; /* Sử dụng flexbox cho bố cục */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    justify-content: space-between; /* Căn đều các phần tử trong header */
+    padding: 1.5rem 7%; /* Padding cho header chi tiết */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Đường viền dưới cho header */
+    position: fixed; /* Đặt header chi tiết cố định */
+    top: 0; /* Căn lề trên bằng 0 */
+    left: 0; /* Căn lề trái bằng 0 */
+    right: 0; /* Căn lề phải bằng 0 */
+    z-index: 1000; /* Đặt z-index cao để header luôn hiện lên trên */
+    font-size: 10px; /* Kích thước chữ cho header chi tiết */
+}
+
+.header1 .logo img {
+    height: 5rem; /* Chiều cao cho logo */
+}
+
+.header1 .navbar a {
+    margin: 0 1rem; /* Khoảng cách giữa các liên kết trong navbar */
+    font-size: 1rem; /* Kích thước chữ cho liên kết */
+    color: #ffffff; /* Màu chữ cho liên kết */
+}
+
+.header1 .navbar a:hover {
+    color: white; /* Màu chữ khi hover liên kết */
+    border-bottom: .1rem solid white;
+    padding-bottom: .5rem;
+}
+
+.header1 .icons div {
+    color: #ffffff; /* Màu chữ cho biểu tượng */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    font-size: 2.5rem; /* Kích thước chữ cho biểu tượng */
+    margin-left: 2rem; /* Khoảng cách bên trái cho biểu tượng */
+}
+
+.header1 .icons div:hover {
+    color: #ffff66; /* Màu chữ khi hover biểu tượng */
+}
+
+
+/* Responsive: Chỉnh sửa cho thiết bị nhỏ */
+@media (max-width: 700px) {
+    #menu-btn {
+        display: block; /* Hiện nút menu trên các thiết bị nhỏ */
+        color: white; /* Màu chữ cho nút menu */
+        font-size: 2rem; /* Kích thước chữ cho nút menu */
+    }
+
+    .header1 .navbar {
+        display: none; /* Ẩn navbar trên thiết bị nhỏ */
+    }
+
+    .header1 .search-form {
+        width: 90%; /* Chiều rộng cho form tìm kiếm trên thiết bị nhỏ */
+        right: 5%; /* Khoảng cách bên phải cho form tìm kiếm trên thiết bị nhỏ */
+    }
+}
+
+/* CSS cho ô nhập liệu */
+textarea {
+    width: 90%; /* Thay đổi chiều rộng ô nhập liệu */
+    height: 50px; /* Thay đổi chiều cao ô nhập liệu */
+    resize: none; /* Ngăn không cho người dùng thay đổi kích thước */
+    padding: 10px; /* Padding bên trong ô nhập liệu */
+    font-size: 16px; /* Kích thước chữ */
+    border-radius: 5px; /* Bo góc cho ô nhập liệu */
+    border: 1px solid #cccccc; /* Viền cho ô nhập liệu */
+    display: block; /* Đảm bảo ô nhập liệu là khối */
+    margin: 0 auto; /* Căn giữa ô nhập liệu */
+}
+.question-header {
+    display: flex;              /* Sử dụng Flexbox */
+    justify-content: space-between; /* Đẩy câu hỏi sang trái, nút sang phải */
+    align-items: center;        /* Căn giữa theo trục dọc */
+    width: 100%;
+}
+
+
+/* Định dạng nút Like/Dislike */
+.like-button,
+.dislike-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    border: none;
+    cursor: pointer;
+}
+
+.like-button {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.dislike-button {
+    background-color: #d9534f;
+    color: white;
+}
+/* Khi được chọn */
+.like-button.selected {
+    background-color: #00FF9C;  /* Màu sau khi đã chọn Like */
+}
+
+.dislike-button.selected {
+    background-color: #FF5733;  /* Màu sau khi đã chọn Dislike */
+}
+
+span {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+button:focus {
+    outline: none; /* Bỏ viền focus cho nút */
+}
+
+.fooster{
+    margin-top: 2px;
+    clear: both;
+    background: #254F89;
+    text-align: center;
+}
+
+.fooster .share{
+    padding: 1rem 0;
+}
+
+.fooster .share a{
+    height: 1rem;
+    width: 1rem;
+    line-height: 5rem;
+    font-size:0;
+    color: #ffff;
+    border: 0;
+    margin: .3rem;
+    border-radius: 50%;
+}
+
+.fooster .share a:hover{
+    background-color: white;
+}
+
+.fooster .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.fooster .links a{
+    padding: 0.2rem 0.5rem;
+    color: #ffff;
+    border: var(--border);
+    font-size: 1rem;  
+}
+
+.fooster .links a:hover{
+    background: lightblue;
+}
+
+.fooster .credit{
+    font-size: 0.9rem;
+    color: #ffff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+
+.fooster .credit span{
+    color: black;
+}

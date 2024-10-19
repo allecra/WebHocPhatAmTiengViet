@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="stylesupport.css">
+</head>
+<body>
+     <header class="header">
+        <section class="flex">
+            <a href="home.html" class="logo">Learn</a>
+            <form action="" method="post" class="search-form">
+                <input type="text" name="search_box" placeholder="Search courses..." required maxlength="100">
+                <button type="submit" class="fas fa-search" name="search-box"></button>
+            </form>
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+            <div class="profile">
+                <img src="https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/5124556.jpg?v=1704769231654">
+                <h3>Dazai Osamu</h3>
+                <span>student</span>
+                <a href="profile.html" class="btn">View Profile</a>
+                <div class="flex-btn">
+                    <a href="login2.html" class="option-btn">login</a>
+                    <a href="register2.html" class="option-btn">register</a>
+                </div>
+            </div>
+        </section>
+    </header>
+    <div class="side-bar">
+        <div class="close-side-bar">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="profile">
+            <img src="https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/5124556.jpg?v=1704769231654">
+            <h3>Dazai Osamu</h3>
+            <span>student</span>
+            <a href="profile.html" class="btn">View Profile</a>
+        </div>
+        <nav class="navbar">
+            <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="learn.html"><i class="fas fa-pen"></i><span>Learn</span></a>
+            <a href="video.html"><i class="fas fa-video"></i><span>Video</span></a>
+            <a href="support.html"><i class="fas fa-microphone"></i><span>Support</span></a>
+            <a href="contact.html"><i class="fas fa-headset"></i><span>Contact</span></a>
+        </nav>
+    </div>
+    <section class="speedSP" id="speedSP">
+        <div class="serv">
+            <div class="box">
+                <div class="sp-left">       
+                    <div class="con">
+                        Input your voice here
+                    </div>
+                    <div class="taste-body-left"> 
+                        <div class="options">
+                            <div class="anguage">
+                              <select name="input-language" id="language"></select>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="taste-content">
+                            <button class="record">
+                                <div class="icon">
+                                    <div class="fa fa-microphone"></div>
+                                    <img src="https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/bars.svg?v=1704769212158" alt="" />
+                                </div>
+                                <p>Start Listening</p>
+                            </button>
+                            <button class="read" onclick="readText()">
+                                <div class="icon">
+                                    <div class="fa fa-volume-up"></div>
+                                    <img src="https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/bars.svg?v=1704769212158" alt="" />
+                                </div>
+                                <p>Read</p>
+                            </button>
+                        </div>      
+                        <div class="lan-p">
+                            <p>Click "Start Listening" to start recording.</p>
+                            <p>Before you start, please allow the browser to obtain the microphone permission.</p>
+                        </div>
+                    </div>      
+                </div>
+                <div class="sp-right">
+                    <div class="con">
+                        Recognition
+                    </div>
+                    <div class="right-body">
+                        <div class="result" spellcheck="false" placeholder="Text will be shown here">
+                            <p class="interim" id="paragraphToRead"></p>      
+                        </div>
+                        <div class="clear-btn">
+                            <button class="clear">
+                                <div class="icon">
+                                    <div class="fa fa-trash-alt"></div>
+                                </div>
+                                <p>Clear</p>
+                            </button>   
+                        </div>             
+                    </div>                                     
+                </div>
+            </div>  
+        </div>
+    </section>
+    <section class="phatam">
+        <iframe src="chaohoi.html" ></iframe>
+        <iframe src="vitri.html"></iframe>
+    </section>
+
+
+
+    <footer class="fooster">
+        &copy; Created by <span>Tran Tuan Khoa</span> || No longer human
+    </footer>
+
+<script src="scriptsupport.js"></script>    
+</body>
+</html>

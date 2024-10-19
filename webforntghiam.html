@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed API</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body> 
+    <div class="background-image"></div>
+     <header >
+        <div class="header1">
+            <a href="#" class="logo">
+                <img src="https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/ATK%20(1).png?v=1704769151788" alt="logo">
+            </a>
+            <nav class="navbar">
+                <a href="webfornthome.html">Home</a>
+                <a href="webforntabout.html">About</a> 
+                <a href="webforntfeatures.html">Features</a>
+                <a href="webforntghiam.html">Demonstration</a>
+                <a href="webreview.html">Review</a>
+              <a href = "diendan.html">Forum</a>
+                <a href="webcontact.html" target="_blank">Contact</a>
+            </nav>
+    
+            <div class="icons">
+                <div class="fas fa-search" id="search-btn"></div>
+                <div class="fas fa-bars" id="menu-btn"></div>
+            </div>
+    
+            <div class="search-form">
+                <input type="search" id="search-box" placeholder="Tìm kiếm....">
+                <label for="search-box" class="fas fa-search"></label>
+            </div>
+        </div>
+       
+    </header>
+    <section class="speedSP" id="speedSP">
+        <h2 class="heading">Demonstration</h2>
+      
+        <div class="serv">
+            <div class="box">
+                <div class="sp-left">       
+                    <div class="con">
+                        Input your voice here
+                    </div>
+                    <div class="taste-body-left"> 
+                        <div class="options">
+                            <div class="anguage">
+                              <select name="input-language" id="language"></select>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="taste-content">
+                            <button class="btn record">
+                                <div class="icon">
+                                    <div class="fa fa-microphone"></div>
+                                    <img src="https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/bars.svg?v=1704769212158" alt="" />
+                                </div>
+                                <p>Start Listening</p>
+                            </button>
+                            <button class="btn read" onclick="readText()">
+                                <div class="icon">
+                                    <div class="fa fa-volume-up"></div>
+                                    <img src="https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/bars.svg?v=1704769212158" alt="" />
+                                </div>
+                                <p>Read</p>
+                            </button>
+                        </div>      
+                        <div class="lan-p">
+                            <p>Click "Start Listening" to start recording.</p>
+                            <p>Before you start, please allow the browser to obtain the microphone permission.</p>
+                        </div>
+                    </div>      
+                </div>
+                <div class="sp-right">
+                    <div class="con">
+                        Recognition
+                    </div>
+                    <div class="result" spellcheck="false" placeholder="Text will be shown here">
+                        <p class="interim" id="paragraphToRead"></p>
+                        
+                    </div>
+                    
+                </div>
+            </div>  
+        </div>
+    </section>
+    <section class="fooster">
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+
+        <div class="links">
+             <a href="index.html">Home</a>
+                <a href="webforntabout.html">About</a> 
+                <a href="webforntfeatures.html">Features</a>
+                <a href="webforntghiam.html">Demonstration</a>
+                <a href="webreview.html">Review</a>
+                <a href="webcontact.html" target="_blank">Contact</a>
+        </div>
+
+        <div class="credit">Created by<span>Nguyen Thi Tam</span>No Longer Human</div>
+
+    </section>
+    <script src="ghiam.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+
+</html>
