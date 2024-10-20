@@ -4,7 +4,7 @@ body {
     margin: 0; /* Bỏ margin */
     padding: 0; /* Bỏ padding */
  
-    background: url("https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/z4967068494540_49fb720e3ff4090985db3072cd0ebb84.jpg?v=1704769227907") no-repeat;
+    background: url("https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/z4967068494540_49fb720e3ff4090985db3072cd0ebb84.jpg?v=1704769227907") no-repeat center center fixed;;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,19 +87,6 @@ button:focus {
     margin-top: 5px;
 }
 
-/* Ảnh nền */
-.background-image {
-    position: fixed; /* Đặt ảnh nền cố định */
-    margin-top: 80px; /* Điều chỉnh khoảng cách từ trên cho ảnh nền */
-    top: 0; /* Căn lề trên bằng 0 */
-    left: 0; /* Căn lề trái bằng 0 */
-    width: 100%; /* Chiều rộng đầy đủ cho ảnh nền */
-    height: 100%; /* Chiều cao đầy đủ cho ảnh nền */
-    z-index: -1; /* Đặt z-index thấp hơn để ảnh nền ở phía sau */
-    background-image: url("https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/1.png?v=1704769242336"); /* Đường dẫn đến ảnh nền */
-    background-size: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ không gian */
-    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
-}
 
 /* Header chi tiết */
 .header1 {
@@ -108,29 +95,31 @@ button:focus {
     align-items: center; /* Căn giữa các phần tử theo chiều dọc */
     justify-content: space-between; /* Căn đều các phần tử trong header */
     padding: 1.5rem 7%; /* Padding cho header chi tiết */
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Đường viền dưới cho header */
+    
     position: fixed; /* Đặt header chi tiết cố định */
     top: 0; /* Căn lề trên bằng 0 */
     left: 0; /* Căn lề trái bằng 0 */
     right: 0; /* Căn lề phải bằng 0 */
     z-index: 1000; /* Đặt z-index cao để header luôn hiện lên trên */
-    font-size: 10px; /* Kích thước chữ cho header chi tiết */
+    font-size: 5px; /* Kích thước chữ cho header chi tiết */
 }
 
 .header1 .logo img {
-    height: 5rem; /* Chiều cao cho logo */
+    height: 4.5rem; /* Chiều cao cho logo */
 }
 
 .header1 .navbar a {
     margin: 0 1rem; /* Khoảng cách giữa các liên kết trong navbar */
     font-size: 1rem; /* Kích thước chữ cho liên kết */
     color: #ffffff; /* Màu chữ cho liên kết */
+    text-decoration: none; /* Loại bỏ gạch chân mặc định của liên kết */
 }
 
 .header1 .navbar a:hover {
-    color: white; /* Màu chữ khi hover liên kết */
-    border-bottom: .1rem solid white;
+    color: white; /* Màu chữ khi hover */
+    background-color: rgb(48, 75, 183); /* Thêm màu nền xanh khi hover */
     padding-bottom: .5rem;
+    border-bottom: .1rem solid white;
 }
 
 .header1 .icons div {
@@ -145,6 +134,7 @@ button:focus {
 }
 
 
+
 /* Responsive: Chỉnh sửa cho thiết bị nhỏ */
 @media (max-width: 700px) {
     #menu-btn {
@@ -154,7 +144,12 @@ button:focus {
     }
 
     .header1 .navbar {
-        display: none; /* Ẩn navbar trên thiết bị nhỏ */
+        position: absolute;
+        top:100%; 
+        right: -100%;
+        background: #ffff;
+        width: 30rem;
+        height: calc(100vh-9.5rem);
     }
 
     .header1 .search-form {
@@ -223,33 +218,38 @@ button:focus {
     outline: none; /* Bỏ viền focus cho nút */
 }
 
-.fooster{
+.fooster {
     margin-top: 2px;
     clear: both;
     background: #254F89;
     text-align: center;
+    padding: 2rem 0; /* Thêm padding cho phần footer */
 }
 
-.fooster .share{
+.fooster .share {
     padding: 1rem 0;
 }
 
-.fooster .share a{
-    height: 1rem;
-    width: 1rem;
-    line-height: 5rem;
-    font-size:0;
-    color: #ffff;
-    border: 0;
-    margin: .3rem;
-    border-radius: 50%;
+.fooster .share a {
+    display: inline-block;      /* Hiển thị các liên kết dưới dạng block */
+    height: 3rem;               /* Chiều cao của icon */
+    width: 3rem;                /* Chiều rộng của icon */
+    line-height: 3rem;          /* Căn chỉnh icon theo chiều dọc */
+    font-size: 1.5rem;          /* Kích thước font cho biểu tượng */
+    color: #fff;                /* Màu biểu tượng (mặc định là trắng) */
+    background-color: #254F89;     /* Màu nền của các biểu tượng */
+    margin: 0.3rem;             /* Khoảng cách giữa các icon */
+    border: 2px solid white;  
+    border-radius: 50%;         /* Tạo hình tròn cho icon */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
 }
 
-.fooster .share a:hover{
-    background-color: white;
+.fooster .share a:hover {
+    background-color: rgb(48, 75, 183);  /* Đổi màu nền thành xanh lá khi hover */
+    color: white;               /* Đảm bảo màu icon vẫn là trắng khi hover */
 }
 
-.fooster .links{
+.fooster .links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -257,24 +257,23 @@ button:focus {
     gap: 1rem;
 }
 
-.fooster .links a{
+.fooster .links a {
     padding: 0.2rem 0.5rem;
     color: #ffff;
-    border: var(--border);
-    font-size: 1rem;  
+    font-size: 1rem;
 }
 
-.fooster .links a:hover{
+.fooster .links a:hover {
     background: lightblue;
 }
 
-.fooster .credit{
+.fooster .credit {
     font-size: 0.9rem;
     color: #ffff;
     font-weight: lighter;
     padding: 1.5rem;
 }
 
-.fooster .credit span{
+.fooster .credit span {
     color: black;
 }
