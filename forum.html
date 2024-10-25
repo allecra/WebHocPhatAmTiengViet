@@ -1,0 +1,910 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" id="min-width" lang="en" xml:lang="en" xmlns:og="http://opengraphprotocol.org/schema/">
+    <head>
+        <title>Diễn đàn thảo luận</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="content-script-type" content="text/javascript"/>
+        <meta http-equiv="content-style-type" content="text/css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="https://illiweb.com/fa/favicon/discussion.ico"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+       
+        
+        <link rel="stylesheet" href="/0-ltr.css" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="https://illiweb.com/rs3/87/frm/lang/en.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+            //<![CDATA[
+            $(document).ready(function() {
+                document.onclick = function(e) {
+                    if (!e.target.classList.contains('navicon')) {
+                        if ($(e.target).parents('.responsive-headerbar').length == 0 && e.target.id != "menu-btn") {
+                            document.getElementById('menu-btn').checked = false;
+                        }
+                    }
+                }
+                ;
+            });
+            //]]>
+        </script>
+        <style type="text/css">
+            #page-footer, div.navbar, div.navbar ul.linklist {
+                display: block !important;
+            }
+
+            ul.linklist li.rightside, ul.linklist li.rightside a.copyright {
+                display: inline !important;
+            }
+
+            <!-- BEGIN switch_ticker_new-->.jcarousel-skin-tango .jcarousel-item {
+                text-align: center;
+                width: 10px;
+            }
+
+            .jcarousel-skin-tango .jcarousel-item-horizontal {
+                margin-right: px;
+            }
+
+            .jcarousel-skin-tango .jcarousel-item-vertical {
+                margin-bottom: px;
+            }
+
+            <!-- END switch_ticker_new--></style>
+        <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-144347007-1"></script>
+        <script type="text/javascript" src="https://illiweb.com/rs3/87/frm/jquery/cookie/jquery.cookie.js"></script>
+        <script type="text/javascript" src="https://illiweb.com/rs3/87/frm/mentions/tooltipster.js"></script>
+        <script type="text/javascript" src="https://illiweb.com/rs3/87/frm/mentions/init.js"></script>
+        <script type="text/javascript" src="https://illiweb.com/rs3/87/frm/jquery/toolbar/FAToolbar.js"></script>
+        <script type="text/javascript" src="https://illiweb.com/rs3/87/frm/json/json2.js"></script>
+        <script type="text/javascript" src="https://illiweb.com/rs3/87/frm/jquery/printf/printf.js"></script>
+        <script type="text/javascript" src="https://illiweb.com/rs3/87/frm/jquery/dotdotdot/jquery.dotdotdot-1.5.6.js"></script>
+        <script type="text/javascript" src="https://illiweb.com/rs3/87/frm/jquery/notif/FA.js"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-144347007-1');
+
+            var setScreen = function() {
+                if (typeof document.documentElement !== "undefined") {
+                    var w = document.documentElement.clientWidth;
+                    var h = document.documentElement.clientHeight;
+                    $.cookie("_fa-screen", '{"w":' + w + ',"h":' + h + '}', {
+                        expires: 15,
+                        domain: 'diendanthaoluan.com'
+                    });
+                }
+            };
+            setScreen();
+            window.Criteo = window.Criteo || {};
+            window.Criteo.events = window.Criteo.events || [];
+
+            // Declare this above the adunits
+            var width = window.screen.width || window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            var isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || width <= 768);
+            var CriteoAdUnits = ""
+
+            Criteo.events.push(function() {
+                Criteo.SetIdentities([{
+                    "uids": [{
+                        id: "12707882adb6bed7b638f6e6c9036dd4",
+                        atype: 3,
+                        ext: {
+                            stype: "hemmd5"
+                        }
+                    }, {
+                        id: "c52fb9ff05b24cf01bb12d39be1779e2c3fcd33e4b215feb806e6ccdb1390f7e",
+                        atype: 3,
+                        ext: {
+                            stype: "hemsha256"
+                        }
+                    }]
+                }]);
+                Criteo.Passback.RequestBids(CriteoAdUnits, 2000);
+            });
+            function CriteoAdblock(containerid, zoneid, pbcontainerid) {
+                Criteo.events.push(function() {
+                    Criteo.DisplayAcceptableAdIfAdblocked({
+                        "zoneid": zoneid,
+                        "containerid": containerid,
+                        "overrideZoneFloor": false,
+                        "callbacksuccess": function() {
+                            document.getElementById(pbcontainerid).style.display = "none";
+                            //if adblock, collapse passback container id
+                        }
+                    });
+                    window.addEventListener("message", function(e) {
+                        if (e.data && e.data == 'criteo-adblock-passback-' + zoneid)
+                            document.getElementById(containerid).style.display = "none";
+                        else
+                            return;
+                    }, false);
+                });
+            }
+
+            function togglePassword(input, icon) {
+                if (input.type === "password") {
+                    input.type = "text";
+                    icon.classList.add("on");
+                } else {
+                    input.type = "password";
+                    icon.classList.remove("on");
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                document.querySelectorAll("input[type=\"password\"]").forEach(function(passwordField) {
+                    const container = document.createElement("div");
+                    container.classList.add("password-container");
+
+                    passwordField.parentNode.insertBefore(container, passwordField);
+                    container.appendChild(passwordField);
+
+                    const eyeIcon = document.createElement("img");
+                    eyeIcon.classList.add("show_hide_pwd");
+                    eyeIcon.src = "https://illiweb.com/fa//icon-eye.svg";
+
+                    eyeIcon.addEventListener("click", function() {
+                        togglePassword(passwordField, eyeIcon);
+                    });
+
+                    container.appendChild(eyeIcon);
+                });
+            });
+
+            if (typeof (_userdata) == "undefined")
+                var _userdata = new Object();
+            _userdata["session_logged_in"] = 1;
+            _userdata["username"] = "Admin";
+            _userdata["user_id"] = 1;
+            _userdata["tpl_used"] = "modernbb";
+            _userdata["user_level"] = 1;
+            _userdata["user_lang"] = "en";
+            _userdata["activate_toolbar"] = 1;
+            _userdata["fix_toolbar"] = 1;
+            _userdata["notifications"] = 1;
+            _userdata["avatar"] = "<img loading=\"lazy\" src=\"https://2img.net/i/fa/modernbb/pp-blank-thumb.png\"  alt=\"avatar\" />";
+            _userdata["avatar_link"] = "https://2img.net/i/fa/modernbb/pp-blank-thumb.png";
+            _userdata["user_posts"] = 1;
+            _userdata["user_nb_privmsg"] = 0;
+            _userdata["groupcolor"] = "000099";
+
+            if (typeof (_lang) == "undefined")
+                var _lang = new Object();
+            _lang["Share"] = "Share";
+            _lang["Login"] = "Log in";
+            _lang["Register"] = "Register";
+            _lang["Welcome"] = "Welcome";
+            _lang["Notifications"] = "Notifications";
+            _lang["See_my_profile"] = "View profile";
+            _lang["Edit_profile"] = "Edit profile";
+            _lang["All_Topics"] = "My topics";
+            _lang["All_Messages"] = "My posts";
+            _lang["js_topics_followed"] = "Watched topics";
+            _lang["Admin_panel"] = "Administration Panel";
+            _lang["Logout"] = "Log out";
+            _lang["Follow"] = "Follow";
+            _lang["Unfollow"] = "Unfollow";
+
+            _lang["Notif_see_all"] = "See all the notifications";
+            _lang["Notif_priv_msg"] = "You have received a <a href=\"/privmsg?folder=inbox&amp;nid=%(nid)s\">private message</a> from <a href=\"/u%(id)d\">%(name)s</a>";
+            _lang["Notif_report"] = "<a href=\"/u%(id)d\">%(name)s</a> has created a <a href=\"/report?nid=%(nid)s\">message report</a>";
+            _lang["Notif_friend_req"] = "You have received a <a href=\"/profile?mode=editprofile&amp;nid=%(nid)s&amp;page_profil=friendsfoes\">friend request</a> from <a href=\"/u%(id)d\">%(name)s</a>";
+            _lang["Notif_group_req"] = "<a href=\"/u%(id)d\">%(name)s</a> has made a request to join the group <a href=\"/g%(group_id)d-%(group_url_name)s?nid=%(nid)s\">%(group_name)s</a>";
+            _lang["Notif_friend_con"] = "<a href=\"/u%(id)d\">%(name)s</a> has connected";
+            _lang["Notif_wall_msg"] = "<a href=\"/u%(id)d\">%(name)s</a> has just written a message on <a href=\"/u%(self)dwall?nid=%(nid)s\">your wall</a>";
+            _lang["Notif_abuse"] = "<a href=\"/admin/?mode=active&amp;nid=%(nid)s&amp;part=misc&amp;sub=support&amp;tid=2df10875e41bcdd52fdb86d5b32144c1&amp;_tc=1729799759\">An abuse</a> was reported";
+            _lang["Notif_topic_watch2"] = "<a href=\"/u%(id)d\">%(name)s</a> wrote a message in <a href=\"/t%(topic_id)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">%(topic_title)s</a>";
+            _lang["Notif_topic_watch_p2"] = "<a href=\"/u%(id)d\">%(name)s</a> wrote a message in <a href=\"/t%(topic_id)dp%(start)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">%(topic_title)s</a>";
+            _lang["Notif_topic_watch_guest2"] = "A guest wrote a message in <a href=\"/t%(topic_id)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">%(topic_title)s</a>";
+            _lang["Notif_topic_watch_p_guest2"] = "A guest wrote a message in <a href=\"/t%(topic_id)dp%(start)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">%(topic_title)s</a>";
+            _lang["Notif_topic_watch"] = "<a href=\"/u%(id)d\">%(name)s</a> wrote a message <a href=\"/t%(topic_id)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">in a watched topic</a>";
+            _lang["Notif_topic_watch_p"] = "<a href=\"/u%(id)d\">%(name)s</a> wrote a message <a href=\"/t%(topic_id)dp%(start)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">in a watched topic</a>";
+            _lang["Notif_topic_watch_guest"] = "A guest wrote a message in <a href=\"/t%(topic_id)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">a topic you watch</a>";
+            _lang["Notif_topic_watch_p_guest"] = "A guest wrote a message in <a href=\"/t%(topic_id)dp%(start)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">a topic you watch</a>";
+            _lang["Notif_mention"] = "<a href=\"/u%(id)d\">%(name)s</a> tagged you in <a href=\"/t%(topic_id)dp%(start)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">%(topic_title)s</a>";
+            _lang["Notif_like"] = "<a href=\"/u%(id)d\">%(name)s</a> likes your post in <a href=\"/t%(topic_id)dp%(start)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">%(topic_display_name)s</a>";
+            _lang["Notif_dislike"] = "<a href=\"/u%(id)d\">%(name)s</a> dislikes your post in <a href=\"/t%(topic_id)dp%(start)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">%(topic_display_name)s</a>";
+            _lang["Notif_hashtag"] = "The keyword <a href=\"/tags/%(tag)s\">#%(tag)s</a> has been tagged in <a href=\"/t%(topic_id)dp%(start)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">a topic</a>";
+            _lang["Notif_forum_watch"] = "<a href=\"/u%(id)d\">%(name)s</a> published <a href=\"/t%(topic_id)d-%(topic_name)s?nid=%(nid)s\">%(topic_title)s</a> in the forum <a href=\"/f%(forum_id)d-%(forum_name)s?nid=%(nid)s\">%(forum_title)s</a>";
+            _lang["Notif_advert_validate"] = "Your ad \"%(ad_title)s\" has been approved. <a href=\"/d%(ad_id)d-%(ad_url)s?nid=%(nid)s\">See the ad</a>";
+            _lang["Notif_advert_delete"] = "Your ad\"%(ad_title)s\" has been removed.";
+            _lang["Notif_advert_refuse"] = "Your ad \"%(ad_title)s\" has been denied. <a href=\"/post?d=%(ad_id)d&amp;f=%(forum_id)d&amp;nid=%(nid)s\">See the ad</a>";
+            _lang["Notif_advert_expired"] = "Your ad \"\" has reached its publication time. You can publish it again by <a href=\"/post?d=%(ad_id)d&amp;f=%(forum_id)d&amp;nid=%(nid)s\">clicking here</a>";
+            _lang["Notif_award"] = "<div class=\"notif_award\" style=\"--award-image:url('%(award_image)s')\"></div><div class=\"notif_award_text\">%(award_notif)s</div>";
+            _lang["Notif_followers_new_topic"] = "Followed member <a href=\"/u%(id)d\">%(name)s</a> published <a href=\"/t%(topic_id)d-%(topic_name)s?nid=%(nid)s\">%(topic_title)s</a>";
+            _lang["Notif_followers_new_post2"] = "Followed member <a href=\"/u%(id)d\">%(name)s</a> wrote a new message in <a href=\"/t%(topic_id)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">%(topic_title)s</a>";
+            _lang["Notif_followers_new_post_p2"] = "Followed member <a href=\"/u%(id)d\">%(name)s</a> wrote a new message in <a href=\"/t%(topic_id)dp%(start)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">%(topic_title)s</a>";
+            _lang["Notif_followers_new_post"] = "Followed member <a href=\"/u%(id)d\">%(name)s</a> wrote a new message <a href=\"/t%(topic_id)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">in a topic</a>";
+            _lang["Notif_followers_new_post_p"] = "Followed member <a href=\"/u%(id)d\">%(name)s</a> wrote a new message <a href=\"/t%(topic_id)dp%(start)d-%(topic_name)s?nid=%(nid)s#%(post_id)d\">in a topic</a>";
+            _lang["Notif_no_notifications"] = "No new notifications";
+            _lang["All_PMs"] = "My private messages";
+            _lang["rank_title"] = "Admin";
+            _lang["No_assigned_rank"] = "No special rank assigned";
+            _lang["Posts"] = "Posts";
+            _lang["PMs"] = "PMs";
+            _lang["Reputation"] = "Reputation";
+            _lang["Twitter"] = "Forumotion";
+            _lang["copied_id"] = "Value copied";
+
+            if (typeof (_board) == "undefined")
+                var _board = new Object();
+            _board["reputation_active"] = 0;
+            _board["Forumotion"] = "Forumotion";
+            _board["toolbar_title_url"] = "https://www.forumotion.com";
+            _board["toolbar_logo"] = "https://2img.net/i/fa/i/toolbar/pa0.png";
+
+           
+            //]]>
+        </script>
+        <link rel="stylesheet" type="text/css" href="https://illiweb.com/rs3/87/frm/mentions/tooltipster.css"/>
+        <style type="text/css">
+            #left .f06f9 {
+                background-color: #ffffff;
+                color: #444444;
+                margin-bottom: 4px;
+                overflow: hidden;
+                padding: 0;
+            }
+
+            #left .f06f9 span.corners-bottom, #left .f06f9 span.corners-top {
+                margin: 0;
+            }
+
+            #main .f06f9 {
+                color: #444444;
+                margin-bottom: 4px;
+                overflow: hidden;
+                padding: 0 10px;
+            }
+
+            #main .f06f9 span.corners-bottom, #main .f06f9 span.corners-top {
+                margin: 0 -10px;
+            }
+
+            #main .f06f9 .main-content iframe {
+                display: block important!;
+                visibility: visible important!
+            }
+
+            div#main-content iframe[src*=adstune]:not([style*=display]), div#main-content iframe[src*=criteo]:not([style*=display]), div#main-content iframe[src*=ad6b]:not([style*=display]), div#main-content iframe[src*=z5x]:not([style*=display]), div#main-content iframe[src*=doubleclick]:not([style*=display]) {
+                display: block !important;
+                visibility: visible !important;
+            }
+
+            div.f47f39f0e {
+                padding: 0 !important;
+                margin-bottom: 10px !important;
+            }
+
+            body {
+                margin: 0;
+                padding: 0 !important;
+            }
+        </style>
+       
+        <script>
+            const publicKey = 'BB7-ellyF1mXM0PAKUzCJkZfJXsc0yettZ_pDSCosypRhmYvbk2ZwQB7VqL5lZkXnSvhUB-RVPxBQponOcsfsJA';
+
+            let isSubscribed = false;
+            let swRegistration = null;
+
+            function urlB64ToUint8Array(base64String) {
+                const padding = '='.repeat((4 - base64String.length % 4) % 4);
+                const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
+
+                const rawData = window.atob(base64);
+                const outputArray = new Uint8Array(rawData.length);
+
+                for (let i = 0; i < rawData.length; ++i) {
+                    outputArray[i] = rawData.charCodeAt(i);
+                }
+                return outputArray;
+            }
+
+            function updateSubscriptionOnServer(subscription) {
+
+                if (subscription != null) {
+                    const key = subscription.getKey('p256dh');
+                    const token = subscription.getKey('auth');
+                    const contentEncoding = (PushManager.supportedContentEncodings || ['aesgcm'])[0];
+
+                    if ('fetch'in window) {
+                        return fetch('ajax/webpush_register.php', {
+                            method: 'POST',
+                            body: JSON.stringify({
+                                endpoint: subscription.endpoint,
+                                publicKey: key ? btoa(String.fromCharCode.apply(null, new Uint8Array(key))) : null,
+                                authToken: token ? btoa(String.fromCharCode.apply(null, new Uint8Array(token))) : null,
+                                contentEncoding,
+                            }),
+                        }).then( () => subscription);
+                    } else {
+
+                        var http = new XMLHttpRequest();
+                        var url = 'ajax/webpush_register.php';
+                        http.open('POST', url, true);
+
+                        //Send the proper header information along with the request
+                        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+                        http.onreadystatechange = function() {
+                            //Call a function when the state changes.
+                            if (http.readyState == 4 && http.status == 200) {
+                                alert(http.responseText);
+                            }
+                        }
+
+                        http.send(JSON.stringify({
+                            endpoint: subscription.endpoint,
+                            publicKey: key ? btoa(String.fromCharCode.apply(null, new Uint8Array(key))) : null,
+                            authToken: token ? btoa(String.fromCharCode.apply(null, new Uint8Array(token))) : null,
+                            contentEncoding: contentEncoding,
+                        }));
+
+                    }
+                } else {
+                    if ('fetch'in window) {
+
+                        return fetch('ajax/webpush_register.php', {
+                            method: 'POST',
+                            body: JSON.stringify({
+                                endpoint: null
+                            }),
+                        }).then( () => subscription);
+                    } else {
+                        var http = new XMLHttpRequest();
+                        var url = 'ajax/webpush_register.php';
+                        http.open('POST', url, true);
+
+                        //Send the proper header information along with the request
+                        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+                        http.onreadystatechange = function() {
+                            //Call a function when the state changes.
+                            if (http.readyState == 4 && http.status == 200) {
+                                alert(http.responseText);
+                            }
+                        }
+
+                        http.send(JSON.stringify({
+                            endpoint: subscription.endpoint,
+                            publicKey: key ? btoa(String.fromCharCode.apply(null, new Uint8Array(key))) : null,
+                            authToken: token ? btoa(String.fromCharCode.apply(null, new Uint8Array(token))) : null,
+                            contentEncoding,
+                        }));
+                    }
+                }
+            }
+
+            function subscribeUser() {
+
+                const applicationServerKey = urlB64ToUint8Array(publicKey);
+                swRegistration.pushManager.subscribe({
+                    userVisibleOnly: true,
+                    applicationServerKey: applicationServerKey
+                }).then(function(subscription) {
+
+                    updateSubscriptionOnServer(subscription);
+
+                    isSubscribed = true;
+                }).catch(function(err) {
+                    console.log('Failed to subscribe the user: ', err.message);
+                    unsubscribeUser();
+                });
+            }
+
+            function unsubscribeUser() {
+                swRegistration.pushManager.getSubscription().then(function(subscription) {
+                    if (subscription) {
+                        return subscription.unsubscribe();
+                    }
+                }).catch(function(error) {
+                    console.log('Error unsubscribing', error);
+                }).then(function() {
+                    updateSubscriptionOnServer(null);
+                    isSubscribed = false;
+                });
+            }
+            if ('serviceWorker'in navigator && 'PushManager'in window) {
+                navigator.serviceWorker.register('/serviceworker.js').then(function(swReg) {
+
+                    swRegistration = swReg;
+
+                })
+            }
+        </script>
+        <script type="text/javascript">
+            $(function() {
+                $("#web_redirect").on("click", function() {
+                    var d = new Date();
+                    var cookie_string = "_mobile_version=0";
+                    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+                    var expires = d.toUTCString();
+                    cookie_string += "; path=/";
+                    cookie_string += "; domain=" + window.location.hostname;
+                    cookie_string += "; expires=" + expires;
+                    document.cookie = cookie_string;
+                    location.reload();
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(function() {
+                $("#mobi_redirect").on("click", function() {
+                    var d = new Date();
+                    var cookie_string = "_mobile_version=1";
+                    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+                    var expires = d.toUTCString();
+                    cookie_string += "; domain=" + window.location.hostname;
+                    cookie_string += "; expires=" + expires;
+                    document.cookie = cookie_string;
+                    location.reload();
+                });
+            });
+        </script>
+        <script type="text/javascript" src="https://illiweb.com/rs3/87/frm/twemoji/twemoji.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese&display=swap" rel="stylesheet"/>
+        <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
+    </head>
+    <body id="modernbb">
+        <a id="top" name="top" accesskey="t"></a>
+        <div id="page-header">
+            <div class="headerbar">
+                <div id="headerbar-top" class="responsive-headerbar">
+                    <div class="wrap">
+                        <a href="/" id="logo">
+                            <img loading="lazy" src="https://2img.net/i/fa/modernbb/logo-simple.png" alt="Diễn đàn thảo luận"/>
+                        </a>
+                        <input class="menu-btn" type="checkbox" id="menu-btn"/>
+                        <label class="menu-icon" for="menu-btn">
+                            <span class="navicon"></span>
+                        </label>
+                        <ul id="modernbb-nav-menu" class="navbar navlinks">
+                            <li>
+                                <a class="mainmenu" href="/">
+                                    <a href="webfornthome.html">Home</a>
+                                </a>
+                                &nbsp;
+                            </li>
+                        
+                            
+                            <li>
+                                <a class="mainmenu" href="/search" onclick="showhide(document.getElementById('search_menu')); return false;">
+                                    <img id="i_icon_mini_search" src="https://2img.net/i/fa/modernbb/icon_search.png" border="0" hspace="2" alt="Search" title="Search"/>Search
+                                </a>
+                                &nbsp;
+                                <div id="search_menu" style="display: none;">
+                                    <div class="overview row3" style="position: absolute; max-width: 100%;width: 350px; z-index: 10000; left:0;right:0;margin-left:auto;margin-right:auto;">
+                                        <form action="/search" method="get">
+                                            <input type="hidden" name="mode" value="searchbox"/>
+                                            <div class="input-wrap">
+                                                <input type="text" class="inputbox" name="search_keywords" placeholder="Search Query"/>
+                                                <button type="submit" class="ion-android-search"></button>
+                                            </div>
+                                            <div class="label-group">
+                                                <span>Display results as :</span>
+                                                <label>
+                                                    <input id="rposts" type="radio" name="show_results" value="posts"/>
+                                                    <span>Posts</span>
+                                                </label>
+                                                <label>
+                                                    <input id="rtopics" type="radio" name="show_results" value="topics" checked="checked"/>
+                                                    <span>Topics</span>
+                                                </label>
+                                            </div>
+                                            <a href="/search" rel="nofollow" title="Advanced Search">Advanced Search</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <a class="mainmenu" href="/profile?mode=editprofile">
+                                    <img id="i_icon_mini_profile" src="https://2img.net/i/fa/modernbb/icon_ucp.png" border="0" hspace="2" alt="Profile" title="Profile"/>Profile
+                                </a>
+                                &nbsp;
+                            </li>
+                            <li>
+                                <a class="mainmenu" href="/privmsg?folder=inbox" rel="nofollow">
+                                    <img id="i_icon_mini_message" src="https://2img.net/i/fa/modernbb/icon_message.png" border="0" hspace="2" alt="Messages" title="Messages"/>Messages
+                                </a>
+                                &nbsp;
+                            </li>
+                            <li>
+                                <a class="mainmenu" href="/login?logout=1&amp;tid=2df10875e41bcdd52fdb86d5b32144c1&amp;key=364d28" rel="nofollow" id="logout">
+                                    <img id="i_icon_mini_logout" src="https://2img.net/i/fa/modernbb/icon_logout.png" border="0" hspace="2" alt="Log out [ Admin ]" title="Log out [ Admin ]"/>Log out [ Admin ]
+                                </a>
+                                &nbsp;
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div id="site-desc">
+                        <div id="site-title">
+                            <h1>Forum</h1>
+                        </div>
+                        <p>Diễn đàn dành cho người học có thể tự do thảo luận và đặt câu hỏi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="conteneur_minwidth_IE modern-resp">
+            <div class="conteneur_layout_IE">
+                <div class="conteneur_container_IE">
+                    <div id="wrap">
+                        <div id="page-body">
+                            <div id="emptyidcc" class="no-left">
+                                <div id="outer-wrapper">
+                                    <div id="wrapper">
+                                        <div id="emptyidleft"></div>
+                                        <div id="container">
+                                            <div id="content-main">
+                                                <div id="main">
+                                                    <div id="main-content">
+                                                        <ul class="linklist top">
+                                                            <li>
+                                                                <a href="/search?search_id=newposts">
+                                                                    <i class="ion-ios-flame"></i>
+                                                                    View posts since last visit
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/search?search_id=egosearch">
+                                                                    <i class="ion-ios-box-outline"></i>
+                                                                    View your posts
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/search?search_id=unanswered">
+                                                                    <i class="ion-ios-chatbubble-outline"></i>
+                                                                    View unanswered posts
+                                                                </a>
+                                                            </li>
+                                                            <li class="rightside">
+                                                                <a href="/?mark=forums" accesskey="m">
+                                                                    <i class="ion-android-checkmark-circle"></i>
+                                                                    Mark all forums read
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="forabg">
+                                                            <ul class="topiclist">
+                                                                <li class="header">
+                                                                    <dl class="icon">
+                                                                        <dd class="dterm">
+                                                                            <div class="table-title">Forum</div>
+                                                                        </dd>
+                                                                        <dd class="topics">
+                                                                            <i class="ion-android-list" data-tooltip="Topics"></i>
+                                                                        </dd>
+                                                                        <dd class="posts">
+                                                                            <i class="ion-android-chat" data-tooltip="Posts"></i>
+                                                                        </dd>
+                                                                        <dd class="lastpost">
+                                                                            <i class="ion-android-time" data-tooltip="Last Posts"></i>
+                                                                        </dd>
+                                                                    </dl>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="topiclist forums">
+                                                                <li class="row">
+                                                                    <dl class="icon" style="background:url(https://2img.net/i/fa/modernbb/forum_read.png) no-repeat scroll 10px 50%;">
+                                                                        <dd class="dterm">
+                                                                            <div style="display: block; margin : 0 0px 0 45px;">
+                                                                                <h3 class="hierarchy">
+                                                                                    <a href="pronounceForum.html" class="forumtitle">Pronounce the Vietnamese </a>
+                                                                                </h3>
+                                                                                <span class="mod-text">Moderator:</span>
+                                                                                &nbsp;<a class="group-mod" href="/g2-moderators">Moderators</a>
+                                                                                <br/>
+                                                                                <strong></strong>
+                                                                            </div>
+                                                                        </dd>
+                                                                        <dd class="topics">
+                                                                            123 <dfn>Topics</dfn>
+                                                                        </dd>
+                                                                        <dd class="posts">
+                                                                            456 <dfn>Posts</dfn>
+                                                                        </dd>
+                                                                        <dd class="lastpost">
+                                                                            <span class="lastpost-infos">
+                                                                                <a href="/t1-your-first-subject" title="Your first subject">First subje...</a>
+                                                                                <br/>
+                                                                                Today at 13:14<br/>
+                                                                                <strong>
+                                                                                    <a href="/u1" class="gensmall">
+                                                                                        <span style="color:#000099" class="color-groups">
+                                                                                            <strong>Admin</strong>
+                                                                                        </span>
+                                                                                    </a>
+                                                                                </strong>
+                                                                                &nbsp;
+                                                                                <a href="/t1-your-first-subject#1" class="last-post-icon">
+                                                                                    <img src="https://2img.net/i/fa/modernbb/icon_topic_latest.png" alt="View latest post" title="View latest post" loading="lazy"/>
+                                                                                </a>
+                                                                            </span>
+                                                                        </dd>
+                                                                    </dl>
+                                                                </li>
+                                                                <li class="row">
+                                                                    <dl class="icon" style="background:url(https://2img.net/i/fa/prosilver/icon_ads.png) no-repeat scroll 10px 50%;">
+                                                                        <dd class="dterm">
+                                                                            <div style="display: block; margin : 0 0px 0 45px;">
+                                                                                <h3 class="hierarchy">
+                                                                                    <a href="/f3-your-first-classifieds-section" class="forumtitle">Your first classifieds section</a>
+                                                                                </h3>
+                                                                                <span class="mod-text">Moderator:</span>
+                                                                                &nbsp;<a class="group-mod" href="/g2-moderators">Moderators</a>
+                                                                                <br/>
+                                                                                <strong></strong>
+                                                                            </div>
+                                                                        </dd>
+                                                                        <dd class="topics">
+                                                                            6789 <dfn>Topics</dfn>
+                                                                        </dd>
+                                                                        <dd class="posts">
+                                                                            <dfn>Posts</dfn>
+                                                                        </dd>
+                                                                        <dd class="lastpost">
+                                                                            <span class="AD_LastPA">
+                                                                                <span class="lastpost-avatar">
+                                                                                    <img src="https://2img.net/i/fa/ads/default-imgads-small.png" alt="Your first classified"/>
+                                                                                </span>
+                                                                                <span class="AD_LastInfos">
+                                                                                    <a href="/d10847478-your-first-classified">Your first classified</a>
+                                                                                    Today at 13:14<br/>
+                                                                                </span>
+                                                                            </span>
+                                                                            <span class="lastpost-infos">
+                                                                                <a href="" title=""></a>
+                                                                                <br/>
+                                                                            </span>
+                                                                        </dd>
+                                                                    </dl>
+                                                                </li>
+                                                                <li class="row">
+                                                                    <dl class="icon" style="background:url(https://2img.net/i/fa/modernbb/forum_read.png) no-repeat scroll 10px 50%;">
+                                                                        <dd class="dterm">
+                                                                            <div style="display: block; margin : 0 0px 0 45px;">
+                                                                                <h2 class="hierarchy">
+                                                                                    <a href="/f2-basket" class="forumtitle">Basket</a>
+                                                                                </h2>
+                                                                                Basket of the forum<br/>
+                                                                                <strong></strong>
+                                                                            </div>
+                                                                        </dd>
+                                                                        <dd class="topics">
+                                                                            48,755<dfn>Topics</dfn>
+                                                                        </dd>
+                                                                        <dd class="posts">
+                                                                            8,748 <dfn>Posts</dfn>
+                                                                        </dd>
+                                                                        <dd class="lastpost">
+                                                                            <span class="lastpost-infos">
+                                                                                <a href="" title=""></a>
+                                                                                <br/>
+                                                                            </span>
+                                                                        </dd>
+                                                                    </dl>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <ul class="linklist bottom">
+                                                            <li>
+                                                                <a href="/search?search_id=activetopics">Today's active topics</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/memberlist?mode=today_posters">Today's top 20 posters</a>
+                                                            </li>
+                                                            <li class="last">
+                                                                <a href="/memberlist?mode=overall_posters">Overall top 20 posters</a>
+                                                            </li>
+                                                            <li class="rightside">
+                                                                <a href="/?mode=delete_cookies" rel="nofollow">
+                                                                    <i class="ion-trash-a"></i>
+                                                                    Delete the forum cookies
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <script type="text/javascript">
+                                                            //<![CDATA[
+                                                            $(document).ready(function() {
+                                                                var btn_collapse = $('<div></div>', {
+                                                                    class: 'btn-collapse'
+                                                                });
+                                                                var btn_collapse_show = $('<i></i>', {
+                                                                    class: 'ion-android-add-circle hidden',
+                                                                    'data-tooltip': 'Expand'
+                                                                }).appendTo(btn_collapse);
+                                                                var btn_collapse_hide = $('<i></i>', {
+                                                                    class: 'ion-android-remove-circle',
+                                                                    'data-tooltip': 'Hide'
+                                                                }).appendTo(btn_collapse);
+                                                                var collapsed = [];
+                                                                if (readCookie('collapsed') != null && readCookie('collapsed') != '') {
+                                                                    collapsed = readCookie('collapsed').split(',');
+                                                                }
+                                                                $(document).on('click', '.btn-collapse', function() {
+                                                                    $(this).children('.ion-android-add-circle').toggleClass('hidden');
+                                                                    $(this).children('.ion-android-remove-circle').toggleClass('hidden');
+                                                                    $(this).parents('.forabg').toggleClass('hidden');
+                                                                    if (readCookie('collapsed') != null && readCookie('collapsed') != '') {
+                                                                        collapsed = readCookie('collapsed').split(',');
+                                                                    }
+                                                                    if (!$(this).parents('.forabg').hasClass('hidden')) {
+                                                                        removeFromArray('' + $(this).parents('.forabg').data('cindex'), collapsed);
+                                                                        createCookie('collapsed', collapsed);
+                                                                    } else {
+                                                                        collapsed.push('' + $(this).parents('.forabg').data('cindex'));
+                                                                        createCookie('collapsed', collapsed);
+                                                                    }
+                                                                });
+                                                                $('.forabg').each(function(i) {
+                                                                    $(this).data('cindex', '' + i);
+                                                                    $(btn_collapse).clone().attr('id', 'forabg' + i).appendTo($(this).find('.header'));
+                                                                    if ($.inArray('' + i, collapsed) > -1) {
+                                                                        $(this).toggleClass('hidden');
+                                                                        $('#forabg' + i).children('.ion-android-add-circle').toggleClass('hidden');
+                                                                        $('#forabg' + i).children('.ion-android-remove-circle').toggleClass('hidden');
+                                                                    }
+                                                                });
+                                                            });
+                                                            function removeFromArray(item, array) {
+                                                                var i = array.indexOf(item);
+                                                                if (i > -1) {
+                                                                    array = array.splice(i, 1);
+                                                                }
+                                                            }
+                                                            function createCookie(name, value, days) {
+                                                                var expires;
+                                                                if (days) {
+                                                                    var date = new Date();
+                                                                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                                                                    expires = "; expires=" + date.toGMTString();
+                                                                } else {
+                                                                    expires = "";
+                                                                }
+                                                                document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
+                                                            }
+                                                            function readCookie(name) {
+                                                                var nameEQ = encodeURIComponent(name) + "=";
+                                                                var ca = document.cookie.split(';');
+                                                                for (var i = 0; i < ca.length; i++) {
+                                                                    var c = ca[i];
+                                                                    while (c.charAt(0) === ' ')
+                                                                        c = c.substring(1, c.length);
+                                                                    if (c.indexOf(nameEQ) === 0)
+                                                                        return decodeURIComponent(c.substring(nameEQ.length, c.length));
+                                                                }
+                                                                return null;
+                                                            }
+                                                            //]]>
+                                                        </script>
+                                                        <div class="block">
+                                                            <div class="h3">
+                                                                <a href="/viewonline" rel="nofollow">
+                                                                    <i class="ion-stats-bars"></i>
+                                                                    Who is online?
+                                                                </a>
+                                                            </div>
+                                                            In total there is <strong>1</strong>
+                                                            user online :: 1 Registered, 0 Hidden and 0 Guests <br/>
+                                                            Most users ever online was <strong>1</strong>
+                                                            on Fri 25 Oct 2024 - 2:55<br/>
+                                                            Registered Users: 
+                                                            <a href="/u1">
+                                                                <span style="color:#000099">
+                                                                    <strong>Admin</strong>
+                                                                </span>
+                                                            </a>
+                                                            <br/>
+                                                            <br/>
+                                                            <br style="line-height:5px;"/>
+                                                            No users have a birthday today<br/>
+                                                            No users are having a birthday in the upcoming 7 days<br/>
+                                                            <div class="block-footer">
+                                                                <strong>Legend:</strong>
+                                                                &nbsp;[&nbsp;
+                                                                <b>
+                                                                    <a style="color: #000099" class="gensmall" href="/g2-moderators" title="Opened group - Group Members : 1">Moderators</a>
+                                                                </b>
+                                                                &nbsp;]
+                                                            </div>
+                                                        </div>
+                                                        <ul id="picture_legend">
+                                                            <li>
+                                                                <img src="https://2img.net/i/fa/modernbb/forum_unread.png" alt="New posts" loading="lazy"/>New posts
+                                                            </li>
+                                                            <li>
+                                                                <img src="https://2img.net/i/fa/modernbb/forum_read.png" alt="No new posts" loading="lazy"/>No new posts
+                                                            </li>
+                                                            <li>
+                                                                <img src="https://2img.net/i/fa/modernbb/forum_read_locked.png" alt="Forum is locked" loading="lazy"/>Forum is locked
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="emptyidright"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="fooster">
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+            </div>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="webforntabout.html">About</a> 
+                <a href="webforntfeatures.html">Features</a>
+                <a href="webforntghiam.html">Demonstration</a>
+                <a href="webreview.html">Review</a>
+                <a href="diendan.html">Forum</a>
+                <a href="webcontact.html" target="_blank">Contact</a>
+            </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            $(document).ready(function() {
+                $(window).scroll(function() {
+                    var header_top = $('#headerbar-top');
+                    if (header_top.hasClass('w-toolbar')) {
+                        if ($(window).scrollTop() >= 42) {
+                            header_top.addClass('is-sticky');
+                        } else {
+                            header_top.removeClass('is-sticky');
+                        }
+                    } else {
+                        if ($(window).scrollTop() >= 1) {
+                            header_top.addClass('is-sticky');
+                        } else {
+                            header_top.removeClass('is-sticky');
+                        }
+                    }
+                });
+            });
+            //]]>
+        </script>
+        <script type="text/javascript">
+            //<![CDATA[
+            fa_endpage();
+            if ('serviceWorker'in navigator && 'PushManager'in window && navigator.userAgent.includes('Mac') && Notification.permission === 'default' && window.matchMedia('(display-mode: standalone)').matches) {
+                window.addEventListener('DOMContentLoaded', function() {
+                    const subButton = document.createElement('span');
+                    subButton.setAttribute('id', 'sub-to-pushs');
+                    subButton.innerHTML = '<i class="ion-social-apple"></i>Push Notifications';
+                    const pageFooter = document.getElementById('page-footer');
+                    pageFooter.getElementsByClassName('footer-home')[0].append(subButton);
+                    subButton.addEventListener('click', async () => {
+                        const result = await window.Notification.requestPermission();
+                        if (result === 'granted') {
+                            subscribeUser();
+                        }
+                    }
+                    );
+                });
+            }
+            //]]>
+        </script>
+    </body>
+</html>
